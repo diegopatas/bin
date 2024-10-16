@@ -1,0 +1,1 @@
+../scripts/tmux/tmux-install.sh
