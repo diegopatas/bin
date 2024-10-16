@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+SNIPPETSRC=~/main/cheat-sheets/shell_snippets
+
+show_file() {
+  syntax=$(grep "syntax" "$1" | cut -d : -f2 | tr -d ' ')
+  if [ -n "$syntax" ]; then
+    batcat "$1" -l "$syntax" -r 3:
+  else
+    batcat "$1" -l "sh"
+  fi
+}
+
+tmux-window() {
+tmux new-window -n "$(basename "$0")" "$SHELL" -c "$1 | less -iR"
+}
+
+open_snippets() {
+  selected=$(find "$SNIPPETSRC" -maxdepth 1 -type f \
+    ! \( -name "README.md" -o -name "LICENSE" \) |\
+    fzf -e -i --delimiter '/' --with-nth '-1' --prompt="Snippet: ")
+
+  if [ -n "$selected" ]; then
+    tmux-window "$(realpath "$0") $selected"
+  fi
+}
+
+main() {
+  if [ -z "$1" ]; then
+    open_snippets
+  else
+    show_file "$1"
+  fi
+}
+
+main "$@"

@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "launch": {
+        "configurations": [
+
+
+        ]
+    },
+	"editor.fontLigatures": true,
+	"editor.renderWhitespace": "all",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "workbench.colorCustomizations": {
+            "editorWhitespace.foreground": "#4b649e7b"
+        },
+    "42header.email": "ddiniz@student.42sp.org.br",
+	"42header.username": "ddiniz",
+	"editor.fontFamily": "'JetBrains Mono','Iosevka', 'Droid Sans Mono', 'monospace', monospace",
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"files.autoSave": "afterDelay",
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+}
