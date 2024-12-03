@@ -4,6 +4,7 @@ alias ll="ls -l"
 alias la="ls -A"
 alias l="ls -CF"
 alias cls="clear && ls"
+alias clsa="clear && ls -la"
 
 alias mal="make all"
 alias mre="make re"
